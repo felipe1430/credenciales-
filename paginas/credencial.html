@@ -32,7 +32,7 @@ body{min-height:100vh;background:#f0f2ff;display:flex;flex-direction:column;alig
 // ==========================================================
 // PASO 1: Pega aquí la URL de tu Google Sheet publicado como CSV
 // (Google Sheet → Archivo → Publicar en la web → CSV → Copiar URL)
-const CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vROi5hGE9A3sfi3SuavKb_bpmpF_Rr6z-QgNC5l3W65kPO2svUSKic3qDqvd0dEvw/pub?output=csv';
+const CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vROi5hGE9A3sfi3SuavKb_bpmpF_Rr6z-QgNC5l3W65kPO2svUSKic3qDqvd0dEvw/pub?output=csv";
 
 // PASO 2: Nombre de tu empresa (opcional, ya viene configurado)
 const EMPRESA = 'Mi Empresa S.A.';
@@ -46,7 +46,7 @@ function acol(id){let h=0;for(const c of id)h=(h*31+c.charCodeAt(0))&0xffff;retu
 async function load(){
   const id=qp('id');
   if(!id){err('No se especificó ID de empleado.<br><small>Añade <b>?id=EMP-001</b> al final de la URL</small>');return;}
-  if(CSV_URL==='https://docs.google.com/spreadsheets/d/e/2PACX-1vROi5hGE9A3sfi3SuavKb_bpmpF_Rr6z-QgNC5l3W65kPO2svUSKic3qDqvd0dEvw/pub?output=csv'){
+  if(CSV_URL==="https://docs.google.com/spreadsheets/d/e/2PACX-1vROi5hGE9A3sfi3SuavKb_bpmpF_Rr6z-QgNC5l3W65kPO2svUSKic3qDqvd0dEvw/pub?output=csv"){
     err('Falta configurar la URL del CSV.<br><small>Edita este archivo y reemplaza <b>CSV_URL</b></small>');return;
   }
   try{
